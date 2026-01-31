@@ -51,7 +51,7 @@ export default function PackageSection({ errors, control }: Props) {
             inputLabel="Total Shipping Cost"
             inputType="input"
             required={true}
-            // disabled={true}
+            disabled={true}
             value={field.value}
             onChange={field.onChange}
             error={errors.totalCost}

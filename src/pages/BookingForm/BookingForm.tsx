@@ -58,7 +58,6 @@ export const BookingForm: React.FC = () => {
     setValue,
     formState: { errors },
     control,
-
     reset,
   } = useForm<FormData>({
     resolver: zodResolver(bookingSchema),
@@ -83,6 +82,7 @@ export const BookingForm: React.FC = () => {
       console.log(data);
       if (data) {
         toast.success("Form submitted successfully!");
+        handleClearForm();
       }
     } catch (error) {
       toast.error("Something went wrong!");
