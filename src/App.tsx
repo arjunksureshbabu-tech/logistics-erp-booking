@@ -1,12 +1,11 @@
-import { useState } from "react";
 import "./App.css";
-import { BookingForm } from "./components/BookingForm/BookingForm";
+import { Toaster } from "react-hot-toast";
+import { BookingForm } from "./pages/BookingForm/BookingForm";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} />
       <BookingForm />
     </>
   );

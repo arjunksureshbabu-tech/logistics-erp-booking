@@ -1,11 +1,10 @@
-import React from "react";
-import { type SectionWrapperProps } from "../../types/booking.types";
+type Props = {
+  title: string;
+  icon?: React.ReactNode;
+  children: React.ReactNode;
+};
 
-export const SectionWrapper: React.FC<SectionWrapperProps> = ({
-  title,
-  icon,
-  children,
-}) => {
+export default function Card({ children, title, icon }: Props) {
   return (
     <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-6">
       <h3 className="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2 ">
@@ -16,4 +15,4 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({
       {children}
     </div>
   );
-};
+}
